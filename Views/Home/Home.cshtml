@@ -1,0 +1,26 @@
+﻿@model RockPaperScissors.Models.UserModel
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Result", "Home", FormMethod.Post))
+{
+	<h1 class="display-4">Welcome</h1>
+	<h3>Let's play Rock Paper Scissors!</h3>
+
+	<div>
+		<p>Make Your Choice!</p>
+		<ul>
+			<li>@Html.CheckBoxFor(m=> m.IsRock) Rock </li>
+			<li>@Html.CheckBoxFor(m => m.IsPaper) Paper</li>
+			<li>@Html.CheckBoxFor(m => m.IsScissors) Scissors </li>
+		</ul>
+		<input type="submit" value="Submit" />
+	</div>
+}
+<script>
+	function MakeSelection(choice) {
+		/* Html.ActionLink("Result"(choice)) */
+	}
+</script>

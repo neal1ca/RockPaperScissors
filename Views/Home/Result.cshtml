@@ -1,0 +1,29 @@
+﻿@model RockPaperScissors.Models.CalculationModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1>Result</h1>
+
+<div>
+    <h4>Results!</h4>
+    @{
+        if (Model.UserIsWinner)
+    {
+            <h1>User wins!</h1>
+        }
+        else if (Model.IsTie)
+        {
+            <h1>It's a tie</h1>
+        }
+        else
+        {
+            <h1>You Lose!</h1>
+        }
+    }
+</div>
+<div>
+    @Html.ActionLink("Home", "Home")
+    <a asp-action="Index">Back to home</a>
+</div>
